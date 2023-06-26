@@ -1,0 +1,84 @@
+/* Reset some default browser styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Set a light pastel background color */
+body {
+    background-color: #f3f3ee;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header styles */
+.main-header {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #f0f0f0;
+}
+
+/* Content styles */
+.content {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer styles */
+.main-footer {
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+    background-color: #f0f0f0;
+    color: #666;
+}
+
+/* Button styles */
+.simulation-button {
+    display: inline-block;
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 10px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.simulation-button:hover {
+    background-color: #45a049;
+}
+
+/* Output styles */
+.output {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+}
+
+/* Explanatory text */
+#explanatory-text h2, #explanatory-text h3, #explanatory-text h4 {
+    margin-bottom: 10px;
+}
+
+#explanatory-text p, #explanatory-text ul {
+    margin-bottom: 20px;
+}
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+}

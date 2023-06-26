@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Organism Simulation</title>
+</head>
+
+<body>
+    <header class="main-header">
+        <h1>Organism Fitness versus Truth Perception Simulation</h1>
+    </header>
+
+    <div id="app" class="content">
+        <div id="explanatory-text">
+            <h2>About The Simulation</h2>
+            <p>
+                This simulation is inspired by Donald Hoffman's "Fitness-Beats-Truth" hypothesis. Hoffman, a cognitive psychologist, proposes the idea that perceptions of an organism are tuned to favor evolutionary fitness over an accurate representation of reality. In simpler terms, the organisms in an environment are more likely to succeed if their perceptions are streamlined for survival rather than aiming to understand the complete truth of the environment.
+            </p>
+        
+            <h3>Understanding Fitness and Truth in this Simulation</h3>
+            <p>
+                In this simulation, there are two types of organisms: truth-seeing organisms and fitness-seeing organisms. Both types of organisms live in a world represented as a grid where each cell has a random amount of food.
+            </p>
+            <ul>
+                <li>
+                    <strong>Truth-Seeing Organisms:</strong> These organisms see the full reality of the world. They can accurately perceive how much food is in each cell. However, they incur an additional cost for processing this information. When making decisions, they aim for the cell with the maximum amount of food. Their health is affected by the food they consume minus the cost of movement and the cost of perceiving the truth.
+                </li>
+                <li>
+                    <strong>Fitness-Seeing Organisms:</strong> These organisms do not see the full reality. Instead, they have a simplified perception of the world, which reduces the cost of processing information. They categorize cells into low, medium, or high gains based on the sum of their health and the food in the cell. Their health is affected by the actual food in the chosen cell minus the cost of movement.
+                </li>
+            </ul>
+        
+            <p>
+                Each organism has health points. They move, consume food, and can reproduce if their health is above a certain threshold. If an organism's health drops to zero or below, it dies.
+            </p>
+        
+            <h3>Running the Simulation</h3>
+            <p>
+                When you run the simulation, it iterates over a set number of cycles and simulates the behavior of both truth-seeing and fitness-seeing organisms as they interact with the world. The simulation is run multiple times, and the average number of surviving organisms of each type is displayed at the end.
+            </p>
+        
+            <h4>Note:</h4>
+            <p>
+                As the simulation involves complex calculations, your browser might freeze for a short period. Please be patient and give it some time to complete the simulation. If your browser is unresponsive for an extended period, you may want to consider using a more powerful device or reducing the number of cycles in the simulation.
+            </p>
+            <p>
+                To see the underlying code, please visit the <a href="https://github.com/storozhenko98/hoffman-fbt-hypothesis">GitHub repository</a>.
+            </p>
+        </div>
+
+        <button onclick="runSimulation()" class="simulation-button">Run Simulation</button>
+        <div id="output" class="output"></div>
+    </div>
+
+    <footer class="main-footer">
+        <p>&copy; 2013 Mykyta Storozhenko</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
