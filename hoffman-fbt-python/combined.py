@@ -78,6 +78,9 @@ class FitnessOrganism(BaseOrganism):
         gains = []
         for each in world:
             raw_gain = each[2] + hp
+            if raw_gain > 10:
+                surplus = raw_gain - 10
+                raw_gain = 10 - surplus
             if raw_gain < 5:
                 gain = 1
             elif raw_gain < 8:

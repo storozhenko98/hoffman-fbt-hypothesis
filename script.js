@@ -80,7 +80,11 @@ class FitnessOrganism extends BaseOrganism {
     decide(world) {
         const hp = this.getHealth();
         const gains = world.map(cell => {
-            const rawGain = cell[2] + hp;
+            let rawGain = cell[2] + hp;
+            if (rawGain > 10) {
+                const surplus = rawGain - 10;
+                rawGain = 10 - surplus;
+            }
             let gain;
             if (rawGain < 5) {
                 gain = 1;

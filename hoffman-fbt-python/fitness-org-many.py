@@ -30,7 +30,9 @@ class Organism:
         gains = []
         for each in world:
             raw_gain = each[2] + hp
-            
+            if raw_gain > 10:
+                surplus = raw_gain - 10
+                raw_gain = 10 - surplus
             # Simplifying the perception of gains
             if raw_gain < 5:
                 gain = 1
